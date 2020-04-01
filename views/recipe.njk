@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+{% block head %}
+
+      <title>{{ item.title }}</title>
+{% endblock %}
+
+{% block content %}
+
+
+<section >
+      
+    <div class="repBox">
+      <img src="{{item.image}}" alt="Imagem da receita, {{item.id}} ">
+    </div>
+    <center>
+            <h1>{{ item.title }}</h1>
+            <p>{{ item.author }}</p>
+      </center>
+    <div class="repBox  ">
+      <h2>Ingredientes</h2>
+      <p class="default  ">Esconder</p>
+      <ul class = "repContent ">
+            {% for ingredient in item.ingredients %}
+            <li> {{ingredient}}</li>
+            {% endfor %}
+      </ul>
+      </div>
+      <div class="repBox ">
+            <h2>Modo de preparo</h2>
+            <p class="default ">Esconder</p>
+                  <ul class = "repContent">
+                  {% for instruction in item.preparation %}
+                  <li> {{instruction}}</li>
+                  {% endfor %} 
+            </ul>   
+      </div>
+      <div class="repBox">
+            <h2>Informações Adicionais</h2>
+            <p class="default">Esconder</p>
+                  
+                  <p id="info" class="repContent">{{item.information}}</p>
+                  
+            </ul>   
+      </div>
+    
+ 
+
+                  
+</section>
+
+
+{% endblock %}

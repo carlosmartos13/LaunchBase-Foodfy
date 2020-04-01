@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+      <title>Sobre - FoodFy</title>
+{% endblock %}
+
+
+{% block content %}
+
+<main>
+    <!-- == BANNER =  -->
+   
+<section>
+        <!-- == CONTEUDO ==  -->
+            <div class="content">
+                
+                <div class="content-list">
+
+                    {% for item in items %}
+                    <div class="content_detale" id="{{item.id}}">
+                        <img src="img/{{item.id}}.png" alt="{{item.id}}">
+                         <h1 class="title_detales">{{item.title}}</h1> 
+                        <p class="author">{{item.author}}</p> 
+                    </div>
+                    {% endfor %}
+                    
+                    
+                </div>
+            </div>
+</section>
+
+
+
+</main>
+
+
+{% endblock %}}
