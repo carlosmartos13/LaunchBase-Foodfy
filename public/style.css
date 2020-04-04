@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #7159c1;
+    --secundary-color: #d17f3b;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +10,8 @@
     border-radius: 0;
     font-family: 'Roboto-Regular', sans-serif;
 }
+
+
 section {
     max-width: 940px;
     margin: 0 auto;
@@ -16,7 +23,8 @@ section {
 }
 header {
     height: 60px;
-    margin-top: 50px;
+    padding-top: 50px;
+    background-color: #111111;
 }
 .logo {
     width: 150px;
@@ -31,14 +39,15 @@ header {
 .menu a {
     text-decoration: none;
     font-size: 16px;
-    color: #111111; 
+    color: #ebebeb; 
     padding: 10px;
  }
 
  section .conteiner .row  .menu a:hover {
    
-    background-color: #f5cdad;
-    font-weight: bold;
+    background-color: #979797;
+    border-radius: 3px;
+    
 }
 .active a  {
     font-weight: bold;
@@ -224,3 +233,57 @@ a{
     text-decoration: none;
     color: #111;
 }
+
+.prymary-button{
+    padding: 10px;
+    border: 3px;
+    color: #fff;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+
+}
+.top {
+    display: flex;
+    height:60px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+/* FORMULARIO DE CONTATO */
+form{
+    display: grid;
+
+}
+label{
+    font-size: 20px;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: bold;
+    margin-top: 22px;
+    margin-bottom: 8px;
+
+ 
+    color: #111111;
+}
+
+input, textarea{
+    font-size: 20px;
+    font-family: 'Roboto-Bold', sans-serif;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    border-radius: 4px;
+
+}
+
+textarea {
+    margin-bottom: 100px;
+}
+
+form > a {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+

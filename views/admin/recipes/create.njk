@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+{% block head %}
+
+      <title>{{ item.title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<section>
+
+
+<form action="POST">
+<div class="top">
+<h1>Criando receita</h1>
+<button type="submit" class="prymary-button"> Salvar Receita</button>
+
+
+</div>
+
+<label >Imagem da receita</label>
+<input type="url" name="image" placeholder="http://">
+
+<label >Ingredientes</label>
+<input type="text" name="ingredients" placeholder="Descreva um ingrediente">
+<a class="add-row" >Adicionar novo ingrediente</a>
+
+<label >Modo de preparo</label>
+<input type="text"name="preparation"  placeholder="Descreva um passo do modo de preparo por vez">
+<a class="add-row" >Adicionar novo passo</a>
+
+<label >Informações adicionais</label>
+<textarea name="information" rows="5" cols="33" > </textarea>
+
+
+</form>
+
+</section>
+      
+
+
+{% endblock %}
